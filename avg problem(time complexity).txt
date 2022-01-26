@@ -1,0 +1,50 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Random;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		try{
+		    Scanner sc=new Scanner(System.in);
+		    
+		    int t=sc.nextInt();
+		    for(int i=1;i<=t; i++)
+		    {
+		        int A1=0; int A2=0; int A3=0;
+		        int number=sc.nextInt();
+		        int n=1;
+		     
+		        while(n<2)
+		        {  int k=0,v=0;
+		           A1=(int)(Math.random()*998+1);
+		            A2=(int)(Math.random()*998+1);
+		             A3=(int)(Math.random()*998+1);
+		            if(!(A1==A2 && A1==A3 && A2==A3))
+		            {
+		                k++;
+		            }
+		            else{
+		                v++;
+		            }
+		           
+		           if((A1+A2+A3)==number*3 && k==1)
+		           break;
+		           else
+		           continue;
+		        }
+		        System.out.println(A1+" "+A2+" "+A3);
+		           
+		    }
+		    
+		}
+		catch(Exception e)
+		{
+		    return;
+		}
+	}
